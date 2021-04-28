@@ -1,0 +1,41 @@
+<div class="col-md-7 mx-auto mt-4">
+    <div class="card">
+        <div class="card-header">
+            <h3>Index</h3>
+        </div>
+        <div class="card-body">
+            <form action="/notes/add" method="POST">
+                <div class="form-group">
+                    <textarea name="message" class="form-control" placeholder="What are you thinking about?" autofocus></textarea>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary btn-block">Send</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+    {{#each notes}}
+        <div class="col-md-7 mx-auto mt-4">
+
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title d-flex-justify-content-between align items-center">
+                        {{user}}
+                    </h3>
+                    <p>
+                        @{{username}}
+                    </p>
+                </div>
+                <div class="card-body">
+                    <p>
+                        {{message}}
+                    </p>
+                    <hr>
+                    <p>Published {{timeago date}}</p>
+                </div>
+            </div>
+
+        </div>
+    {{/each}}

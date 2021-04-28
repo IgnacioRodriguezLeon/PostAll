@@ -1,0 +1,14 @@
+<div class="sidenav">
+    <div class="col-md-6 mx-auto">
+        <a href="/"><img src="../../public/img/post.png" class="logo-img" alt="Logo"></a>
+    {{#if user}}
+        <a href="/notes"><img src="/public/img/home.png" alt="home"> Home</a>
+        <a href="/notes/mylist"><img src="/public/img/profile.png" alt="profile">Profile</a>
+        <a href="/users/logout"><img src="/public/img/profile.png" alt="profile">Logout</a>
+        <a href="/notes/add" class="btn btn-primary btn-block" style="color: #fff; border-radius: 20px;">Post!</a>
+        {{else}}
+        <a href="/users/login"><img src="/public/img/profile.png" alt="profile">Login</a>
+        <a href="/users/signup"><img src="/public/img/profile.png" alt="profile">Register</a>
+    {{/if}}
+    </div>
+</div>
